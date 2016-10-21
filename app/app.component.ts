@@ -1,38 +1,21 @@
 import { Component } from '@angular/core';
+import { Meal } from './meal.model';
 
 @Component({
     selector: 'my-app',
     template: `
     <div class="container">
-      <h1>My First Angular 2 App</h1>
-      <h3 (click)="showDetails(currentTask)" *ngFor="let currentTask of tasks">{{ currentTask.description }}</h3>
-      <h1>Edit Task</h1>
-      <div>
-        <label>Enter Task Description:</label>
-        <input [(ngModel)]="selectedTask.description">
-      </div>
-      <div>
-        <label>Enter Task ID:</label>
-        <input [(ngModel)]="selectedTask.id">
-      </div>
+      <h1 class="text-center">My Meals</h1>
+
     </div>
     `
 })
 
 export class AppComponent {
-  public tasks: Task[] = [
-    new Task("Create To-Do List app.", 0),
-    new Task("Learn Kung Fu.", 1),
-    new Task("Rewatch all the Lord of the Rings movies.", 2),
-    new Task("Do the laundry", 3)
+  public masterMealList: Meal[] = [
+    new Meal("Pizza", 923, "3 slices", "Monday", "Dinner", 0),
+    new Meal("Oatmeal", 115, "1 package brown sugar and cinnamon", "Monday", "Breakfast",1),
+    new Meal("Salad", 376, "1 package sunflower crunch", "Monday", "Lunch",2)
   ];
-  selectedTask: Task = this.tasks[0];
-  showDetails(clickedTask: Task) {
-    this.selectedTask = clickedTask;
-  }
-}
 
-export class Task {
-  public done: boolean = false;
-  constructor(public description: string, public id: number) { }
 }
