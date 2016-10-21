@@ -6,7 +6,7 @@ import { Meal } from './meal.model';
   template: `
     <form>
       <div class="meals well text-center">
-        <div class="row">
+        <div class="row header-row">
           <div class="col-sm-2">
             <h3>Meal</h3>
           </div>
@@ -41,7 +41,7 @@ import { Meal } from './meal.model';
               <h4>{{ currentMeal.mealTime }}</h4>
             </div>
             <div class="col-sm-1">
-              <button (click)="editMeal(currentMeal)">Edit Meal</button>
+              <button class="btn btn-info" (click)="editMeal(currentMeal)">Edit Meal</button>
             </div>
           </div>
         </div>

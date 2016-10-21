@@ -34,7 +34,7 @@ import { Meal } from './meal.model';
         <div class="col-sm-2">
           <div class="form-group">
             <label>Meal Time:</label>
-            <select #newMealTime>
+            <select #newMealTime class="form-control">
               <option>Breakfast</option>
               <option>Lunch</option>
               <option>Dinner</option>
@@ -43,7 +43,7 @@ import { Meal } from './meal.model';
           </div>
         </div>
         <div class="col-sm-1">
-          <button (click)="addClicked(newMealType.value, newCalories.value, newNotes.value, newDate.value, newMealTime.value);
+          <button class="btn btn-success"(click)="addClicked(newMealType.value, newCalories.value, newNotes.value, newDate.value, newMealTime.value);
             newMealType.value = '';
             newCalories.value = '';
             newNotes.value = '';
