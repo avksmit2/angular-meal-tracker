@@ -67,7 +67,7 @@ export class NewMealComponent {
     this.mealId = this.mealList[0].id + 1;
   }
   addClicked(mealType: string, calories: number, notes: string, date: string, mealTime: string) {
-    var newMeal: Meal = new Meal(mealType, calories, notes, date, mealTime, this.mealId);
+    var newMeal: Meal = new Meal(mealType, calories, notes, date, mealTime, 4);
     this.newMealSender.emit(newMeal);
   }
 }
