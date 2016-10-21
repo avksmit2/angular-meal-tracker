@@ -38,15 +38,13 @@ import * as moment from 'moment/moment';
             </select>
           </div>
         </div>
-        <div class="col-sm-1">
-          <button class="btn btn-success"(click)="addClicked(newMealType.value, newCalories.value, newNotes.value, newMealTime.value);
-            newMealType.value = '';
-            newCalories.value = '';
-            newNotes.value = '';
-            newDate.value = '';
-            ">Add</button>
-        </div>
       </div>
+      <button class="btn btn-success"(click)="addClicked(newMealType.value, newCalories.value, newNotes.value, newMealTime.value);
+        newMealType.value = '';
+        newCalories.value = '';
+        newNotes.value = '';
+        newDate.value = '';
+        ">Add</button>
     </form>
   `
 })

@@ -1,3 +1,18 @@
 .header-row {
   border-bottom: solid;
 }
+
+.filter {
+    border: gray solid;
+    box-shadow: inset 110px 90px 375px pink;
+    padding-left: 40px;
+}
+
+#totCaloriesDate {
+  text-decoration: underline;
+  color: blue;
+}
+
+#totCaloriesDate:hover {
+  cursor: pointer;
+}

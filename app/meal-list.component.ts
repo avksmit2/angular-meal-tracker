@@ -4,17 +4,17 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-list',
   template: `
-  <div class="filter">
-    <h3>Filter</h3>
-    <p>Show meals with
-      <select (change)="filterCalories($event.target.value)">
-        <option selected>more or less (all)</option>
-        <option>more</option>
-        <option>less</option>
-      </select>
-      than 500 calories.
-    </p>
-  </div>
+    <div class="filter">
+      <h3>Filter</h3>
+      <p>Show meals with
+        <select (change)="filterCalories($event.target.value)">
+          <option selected>more or less (all)</option>
+          <option>more</option>
+          <option>less</option>
+        </select>
+        than 500 calories.
+      </p>
+    </div>
     <form>
       <div class="meals well text-center">
         <div class="row header-row">
@@ -45,7 +45,7 @@ import { Meal } from './meal.model';
             <div class="col-sm-3">
               <h4>{{ currentMeal.notes }}</h4>
             </div>
-            <div (click)="getTotalCalories(currentMeal.date)" class="col-sm-2">
+            <div (click)="getTotalCalories(currentMeal.date)" class="col-sm-2" id="totCaloriesDate">
               <h4>{{ currentMeal.date }}</h4>
             </div>
             <div class="col-sm-2">
@@ -74,6 +74,7 @@ export class MealListComponent {
   getTotalCalories(dateToEvaluate: string) {
     var output: Meal[] = [];
     var totalCalories: number = 0;
+    var avgCalories: number = 0;
     output = this.childMealList.sort(function(a,b) {
       return (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0);
     });
@@ -82,6 +83,7 @@ export class MealListComponent {
         totalCalories += meal.calories;
       }
     })
-    alert("The total calories for " + dateToEvaluate + " are " + totalCalories);
+    avgCalories = parseFloat((totalCalories / output.length).toFixed(2));
+    alert("The total calories for " + dateToEvaluate + " are " + totalCalories + ". The average calories eaten for that day is: " + avgCalories + ".");
   }
 }
