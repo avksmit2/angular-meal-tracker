@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { Overlay } from 'angular2-modal';
+import { Modal } from 'angular2-modal/plugins/bootstrap';
 import { Meal } from './meal.model';
 
 @Component({
     selector: 'my-app',
     template: `
     <div class="container">
-      <h1 class="text-center">My Meals</h1>
+      <h1 class="text-center" id="header">My Meals</h1>
       <meal-list [childMealList] = "masterMealList"
                   (clickEditSender) = "editMeal($event)"
       ></meal-list>
@@ -26,6 +28,7 @@ export class AppComponent {
     new Meal("Salad", 376, "1 package sunflower crunch", "Lunch",2)
   ];
   public selectedMeal: Meal = null;
+
   addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
   }

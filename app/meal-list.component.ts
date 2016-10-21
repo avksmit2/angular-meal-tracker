@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
+import { Overlay, overlayConfigFactory } from 'angular2-modal';
 
 @Component({
   selector: 'meal-list',
@@ -17,7 +18,7 @@ import { Meal } from './meal.model';
     </div>
     <form>
       <div class="meals well text-center">
-        <div class="row header-row">
+        <div class="row listHeaderRow">
           <div class="col-sm-1">
             <h3>Meal</h3>
           </div>
@@ -55,7 +56,7 @@ import { Meal } from './meal.model';
               <button class="btn btn-info" (click)="editMeal(currentMeal)">Edit Meal</button>
             </div>
           </div>
-        </div>
+          </div>
       </div>
     </form>
   `

@@ -8,8 +8,13 @@ import { EditMealComponent } from './edit-meal.component';
 import { CaloriesPipe } from './calories.pipe';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, MealListComponent, NewMealComponent, EditMealComponent, CaloriesPipe ],
+  imports: [ BrowserModule,
+              FormsModule ],
+  declarations: [ AppComponent,
+              MealListComponent,
+              NewMealComponent,
+              EditMealComponent,
+              CaloriesPipe ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

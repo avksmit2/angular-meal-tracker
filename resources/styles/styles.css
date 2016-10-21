@@ -1,4 +1,20 @@
-.header-row {
+body {
+  background-image: url("http://wallpaper.zone/img/5429429.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Gloria Hallelujah', cursive;
+
+}
+
+#header {
+  font-size: 8em;
+  color: #cc6600;
+  text-shadow:  1px 1px 3px rgba(33, 33, 33, 0.7);
+}
+
+.listHeaderRow {
   border-bottom: solid;
 }
 
@@ -6,6 +22,18 @@
     border: gray solid;
     box-shadow: inset 110px 90px 375px pink;
     padding-left: 40px;
+}
+
+.details {
+  font-size: 20px;
+}
+#edit {
+  color: maroon;
+
+}
+
+#addMeal {
+  color: blue;
 }
 
 #totCaloriesDate {

@@ -6,9 +6,9 @@ import * as moment from 'moment/moment';
 @Component({
   selector: 'new-meal',
   template: `
-    <h2>Add New Meal</h2>
-    <form>
-      <div class="row">
+    <form id="addMeal">
+      <h2>Add New Meal</h2>
+      <div class="row details">
         <div class="col-sm-3">
           <div class="form-group">
             <label>Meal Type:</label>
