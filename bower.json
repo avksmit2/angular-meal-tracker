@@ -1,0 +1,22 @@
+{
+  "name": "angular-meal-tracker",
+  "description": "stores details about meals",
+  "main": "gulpfile.js",
+  "authors": [
+    "Angie Smith <avksmit2@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/avksmit2/angular-meal-tracker.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.15.1"
+  }
+}
