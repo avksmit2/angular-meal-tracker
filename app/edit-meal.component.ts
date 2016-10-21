@@ -4,6 +4,8 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'edit-meal',
   template: `
+    <div *ngIf="childSelectedMeal">
+    <h1>Edit Meal</h1>
       <div class="row">
         <div class="col-sm-3">
           <div class="form-group">
@@ -44,6 +46,7 @@ import { Meal } from './meal.model';
           <button class="btn btn-success"(click)="doneEditingClicked()">Done Editing</button>
         </div>
       </div>
+    </div>
   `
 })
 

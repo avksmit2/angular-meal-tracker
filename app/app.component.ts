@@ -25,7 +25,7 @@ export class AppComponent {
     new Meal("Oatmeal", 115, "1 package brown sugar and cinnamon", "Monday", "Breakfast",1),
     new Meal("Salad", 376, "1 package sunflower crunch", "Monday", "Lunch",2)
   ];
-  public selectedMeal: Meal = this.masterMealList[0];
+  public selectedMeal: Meal = null;
   addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
   }
