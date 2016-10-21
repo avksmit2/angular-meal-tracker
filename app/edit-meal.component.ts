@@ -25,7 +25,7 @@ import { Meal } from './meal.model';
             <input [(ngModel)]="childSelectedMeal.notes" class="form-control">
           </div>
         </div>
-        <div class="col-sm-1">
+        <div class="col-sm-2">
           <div class="form-group">
             <label>Day:</label>
             <input [(ngModel)]="childSelectedMeal.date" class="form-control">

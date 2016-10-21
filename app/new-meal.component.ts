@@ -1,5 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
+import * as moment from 'moment/moment';
+
 
 @Component({
   selector: 'new-meal',
@@ -25,7 +27,6 @@ import { Meal } from './meal.model';
             <input #newNotes class="form-control">
           </div>
         </div>
-
         <div class="col-sm-2">
           <div class="form-group">
             <label>Meal Time:</label>

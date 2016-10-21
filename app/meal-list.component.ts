@@ -18,13 +18,13 @@ import { Meal } from './meal.model';
     <form>
       <div class="meals well text-center">
         <div class="row header-row">
-          <div class="col-sm-2">
+          <div class="col-sm-1">
             <h3>Meal</h3>
           </div>
           <div class="col-sm-2">
             <h3>Calories</h3>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <h3>Notes</h3>
           </div>
           <div class="col-sm-2">
@@ -36,7 +36,7 @@ import { Meal } from './meal.model';
         </div>
         <div *ngFor="let currentMeal of childMealList | calories:selectedCaloriesRange">
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-1">
               <h4>{{ currentMeal.mealType }}</h4>
             </div>
             <div class="col-sm-2">
@@ -45,7 +45,7 @@ import { Meal } from './meal.model';
             <div class="col-sm-3">
               <h4>{{ currentMeal.notes }}</h4>
             </div>
-            <div class="col-sm-2">
+            <div (click)="getTotalCalories(currentMeal.date)" class="col-sm-2">
               <h4>{{ currentMeal.date }}</h4>
             </div>
             <div class="col-sm-2">
@@ -70,5 +70,18 @@ export class MealListComponent {
   }
   filterCalories(caloriesRange: string) {
     this.selectedCaloriesRange = caloriesRange;
+  }
+  getTotalCalories(dateToEvaluate: string) {
+    var output: Meal[] = [];
+    var totalCalories: number = 0;
+    output = this.childMealList.sort(function(a,b) {
+      return (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0);
+    });
+    output.forEach(function(meal) {
+      if (meal.date === dateToEvaluate) {
+        totalCalories += meal.calories;
+      }
+    })
+    alert("The total calories for " + dateToEvaluate + " are " + totalCalories);
   }
 }
