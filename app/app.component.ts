@@ -6,7 +6,12 @@ import { Meal } from './meal.model';
     template: `
     <div class="container">
       <h1 class="text-center">My Meals</h1>
-
+      <meal-list [childMealList] = "masterMealList"
+                  (clickEditSender) = "editMeal($event)"
+      ></meal-list>
+      <new-meal [childMealList] = "masterMealList"
+                (newMealSender) = "addMeal($event)"
+      ></new-meal>
     </div>
     `
 })
@@ -17,5 +22,7 @@ export class AppComponent {
     new Meal("Oatmeal", 115, "1 package brown sugar and cinnamon", "Monday", "Breakfast",1),
     new Meal("Salad", 376, "1 package sunflower crunch", "Monday", "Lunch",2)
   ];
-
+  addMeal(newMealFromChild: Meal) {
+    this.masterMealList.push(newMealFromChild);
+  }
 }
