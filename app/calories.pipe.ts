@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
 export class CaloriesPipe implements PipeTransform {
   transform(input: Meal[], caloriesRange: string) {
     var output: Meal[] = [];
-    if (caloriesRange !== "Show All") {
+    if (caloriesRange !== "more or less (all)") {
       input.forEach(function(meal) {
         if (caloriesRange === "more" && meal.calories >= 500 ) {
           output.push(meal);
