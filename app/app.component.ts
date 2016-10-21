@@ -21,9 +21,9 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public masterMealList: Meal[] = [
-    new Meal("Pizza", 923, "3 slices", "Monday", "Dinner", 0),
-    new Meal("Oatmeal", 115, "1 package brown sugar and cinnamon", "Monday", "Breakfast",1),
-    new Meal("Salad", 376, "1 package sunflower crunch", "Monday", "Lunch",2)
+    new Meal("Pizza", 923, "3 slices", "Dinner", 0),
+    new Meal("Oatmeal", 115, "1 package brown sugar and cinnamon", "Breakfast",1),
+    new Meal("Salad", 376, "1 package sunflower crunch", "Lunch",2)
   ];
   public selectedMeal: Meal = null;
   addMeal(newMealFromChild: Meal) {

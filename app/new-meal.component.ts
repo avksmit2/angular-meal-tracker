@@ -25,12 +25,7 @@ import { Meal } from './meal.model';
             <input #newNotes class="form-control">
           </div>
         </div>
-        <div class="col-sm-1">
-          <div class="form-group">
-            <label>Day:</label>
-            <input #newDate class="form-control">
-          </div>
-        </div>
+
         <div class="col-sm-2">
           <div class="form-group">
             <label>Meal Time:</label>
@@ -43,7 +38,7 @@ import { Meal } from './meal.model';
           </div>
         </div>
         <div class="col-sm-1">
-          <button class="btn btn-success"(click)="addClicked(newMealType.value, newCalories.value, newNotes.value, newDate.value, newMealTime.value);
+          <button class="btn btn-success"(click)="addClicked(newMealType.value, newCalories.value, newNotes.value, newMealTime.value);
             newMealType.value = '';
             newCalories.value = '';
             newNotes.value = '';
@@ -66,8 +61,9 @@ export class NewMealComponent {
     });
     this.mealId = this.mealList[0].id + 1;
   }
-  addClicked(mealType: string, calories: number, notes: string, date: string, mealTime: string) {
-    var newMeal: Meal = new Meal(mealType, calories, notes, date, mealTime, 4);
+  addClicked(mealType: string, calories: number, notes: string, mealTime: string) {
+    var newMeal: Meal = new Meal(mealType, calories, notes, mealTime, this.mealId);
     this.newMealSender.emit(newMeal);
   }
+
 }

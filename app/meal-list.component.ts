@@ -27,7 +27,7 @@ import { Meal } from './meal.model';
           <div class="col-sm-4">
             <h3>Notes</h3>
           </div>
-          <div class="col-sm-1">
+          <div class="col-sm-2">
             <h3>Date</h3>
           </div>
           <div class="col-sm-2">
@@ -42,10 +42,10 @@ import { Meal } from './meal.model';
             <div class="col-sm-2">
               <h4>{{ currentMeal.calories }}</h4>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <h4>{{ currentMeal.notes }}</h4>
             </div>
-            <div class="col-sm-1">
+            <div class="col-sm-2">
               <h4>{{ currentMeal.date }}</h4>
             </div>
             <div class="col-sm-2">
