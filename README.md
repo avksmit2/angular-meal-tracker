@@ -39,13 +39,13 @@ If there are any issues, questions or ideas regarding this application, contact 
 
 ## Technologies Used
 
-_CSS
-SASS
-Bootstrap
-Node.js
-gulp
-Bower
-TypeScript
+_CSS,
+SASS,
+Bootstrap,
+Node.js,
+gulp,
+Bower,
+TypeScript,
 Angular 2_
 
 ### License
